@@ -2,6 +2,7 @@
   "name": "react-horizontal-scroll",
   "version": "0.0.1",
   "main": "dist/index.js",
+  "description": "React component with horizontal scroll & navigation buttons",
   "dependencies": {
     "classnames": "^2.2.6"
   },
@@ -35,6 +36,12 @@
     "test": "node test/test.js",
     "pretest": "npm run build"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iscars/react-horizontal-scroll.git"
+  },
+  "author": "Albert Khabibullin",
+  "license": "MIT",
   "files": [
     "dist"
   ]
