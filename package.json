@@ -1,8 +1,8 @@
 {
-  "name": "react-horizontal-scroll",
-  "version": "0.0.1",
+  "name": "react-slider-overflow-x",
+  "version": "1.0.0",
   "main": "dist/index.js",
-  "description": "React component with horizontal scroll & navigation buttons",
+  "description": "React slider with horizontal scroll",
   "dependencies": {
     "classnames": "^2.2.6"
   },
