@@ -1,0 +1,48 @@
+.slider {
+  display: flex;
+  align-items: flex-start;
+  min-height: 20px;
+  overflow: hidden;
+  font-family: sans-serif;
+
+  &__btn {
+    flex: none;
+    opacity: 1;
+    visibility: visible;
+    transition: visibility 300ms, opacity 300ms;
+
+    &[disabled] {
+      cursor: default;
+      pointer-events: none;
+    }
+
+    &.hide {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  &__scroller {
+    flex: auto;
+    padding-bottom: 48px;
+    overflow: {
+      x: auto;
+      y: hidden;
+    }
+
+    -webkit-overflow-scrolling: touch;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__body {
+    position: relative; // to calculate the coordinates
+    display: inline-flex;
+    vertical-align: middle;
+  }
+
+  &__item {
+    flex: auto;
+  }
+}
