@@ -1,5 +1,4 @@
 import React, { ReactNode } from 'react';
-import classNames from 'classnames';
 
 export type Props = {
   onClick: () => void;
@@ -14,7 +13,7 @@ export const NavButton = ({ onClick, disabled, visible, className, arrow='<' }: 
       onClick={onClick}
       disabled={disabled}
       type="button"
-      className={classNames('slider__btn', className, visible && 'visible')}
+      className={['slider__btn', className, visible && 'visible'].join(' ')}
   >
       {arrow}
   </button>
