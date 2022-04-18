@@ -1,48 +1,44 @@
 {
   "name": "react-slider-overflow-x",
-  "version": "1.0.0",
-  "main": "dist/index.js",
   "description": "React slider with horizontal scroll",
-  "dependencies": {
-    "classnames": "^2.2.6"
+  "version": "1.0.0",
+  "files": [
+    "dist",
+    "src",
+    "tsconfig.json"
+  ],
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js"
+    }
   },
-  "peerDependencies": {
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0"
+  "imports": {
+    "#/*": "./src/*"
   },
-  "devDependencies": {
-    "@babel/core": "^7.7.2",
-    "@types/classnames": "^2.2.9",
-    "@types/react": "^16.9.11",
-    "babel": "^6.23.0",
-    "node-sass": "^4.13.0",
-    "rollup": "^1.26.5",
-    "rollup-plugin-babel": "^4.3.3",
-    "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-image": "^1.0.2",
-    "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-postcss": "^2.0.3",
-    "rollup-plugin-svg": "^2.0.0",
-    "rollup-plugin-svgo": "^1.1.0",
-    "rollup-plugin-typescript": "^1.0.1",
-    "rollup-plugin-typescript2": "^0.25.2",
-    "tslib": "^1.10.0",
-    "typescript": "^3.7.2",
-    "typings": "^2.1.1"
-  },
+  "types": "./dist/src/index.d.ts",
   "scripts": {
-    "build": "rollup -c",
-    "dev": "rollup -c -w",
-    "test": "node test/test.js",
-    "pretest": "npm run build"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/iscars/react-horizontal-scroll.git"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
   },
   "author": "Albert Khabibullin",
   "license": "MIT",
-  "files": [
-    "dist"
-  ]
+  "source": "src/Slider.tsx",
+  "dependencies": {
+    "classnames": "^2.3.1",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.24",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@vitejs/plugin-react": "^1.3.0",
+    "sass": "^1.50.0",
+    "typescript": "^4.6.3",
+    "vite": "^2.9.2"
+  }
 }
