@@ -21,20 +21,21 @@
   "types": "./dist/src/index.d.ts",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "npm run clean && vite build && tsc --build",
+    "clean": "rm -rf dist",
     "preview": "vite preview"
   },
   "author": "Albert Khabibullin",
   "license": "MIT",
   "source": "src/Slider.tsx",
   "peerDependencies": {
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
   },
   "devDependencies": {
     "@types/node": "^17.0.24",
-    "@types/react": "^18.0.0",
-    "@types/react-dom": "^18.0.0",
+    "@types/react": "17.0.2",
+    "@types/react-dom": "17.0.2",
     "@vitejs/plugin-react": "^1.3.0",
     "sass": "^1.50.0",
     "typescript": "^4.6.3",

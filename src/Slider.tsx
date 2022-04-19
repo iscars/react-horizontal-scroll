@@ -9,7 +9,7 @@ type RenderProps = {
     nextButton: (arrow?: ReactNode) => ReactNode;
 };
 
-type Props = {
+export type SliderProps = {
     children: ReactNode;
     duration: number;
     render?: (components: RenderProps) => ReactNode;
@@ -23,7 +23,7 @@ type State = {
     scrollWidth?: number;
 };
 
-class Slider extends Component<Props, State> {
+export class Slider extends Component<SliderProps, State> {
     static defaultProps = {
         duration: 300
     };
@@ -43,7 +43,7 @@ class Slider extends Component<Props, State> {
         this.checkShowButtons();
     }
 
-    componentDidUpdate(prevProps: Props, prevState: State) {
+    componentDidUpdate(prevProps: SliderProps, prevState: State) {
         /**
          * Есть проблема, когда обновляются children, то нам нужно проверить, что они обновились.
          * Решили, что проверка длины скроллера будет лучшим решением
