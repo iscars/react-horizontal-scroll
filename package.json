@@ -1,7 +1,7 @@
 {
   "name": "react-slider-overflow-x",
   "description": "React slider with horizontal scroll",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "files": [
     "dist",
     "src",
